@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>anh iuuu bbiii</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">❤️❤️</span><br/>
+			<span class="comments">Ngọc ưiiiiii.....</span><br/>
+			<span class="comments"></span>Anh muốn nói với em là ....<br/>
+			<span class="comments">........</span><br/>
+			<span class="comments">👉👈</span><br/>
+			<span class="comments"></span>kỉu như là :333<br/>
+			<span class="comments"></span> làaa .... hí hí 👉👈🤭<br/>
+			Được ở bên em và được cùng em chia sẻ,nói chiện, được yêu em, <br/>
+			<span class="comments"></span> thì thế giới của anh đã trở nên màu hồng khi có em :33❤️<br/>
+			<span class="comments"></span> vứiiii cạ anh mún nói là.....<br/>
+			<span class="comments"></span> anh yêuuuu bbi nhìuuuu nhìu nhắm ạ bbi :33❤️❤️moaaaa moaaaaaa moaaaaaaa❤️❤️❤️❤️<br/>
+			<span class="comments"></span> Valentine này hãy để anh sưởi ấm cho em bằng trái tim thật thà này nhaa hí❤️<br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Minh yêuu Ngọc
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I Love You Chu Cà Mooooo❤️❤️❤️❤️<br/>
+					<div class="signature">❤️❤️❤️❤️Moaaaa moaaa❤️❤️❤️❤️ </div>
+					<div class="signature" style="margin-left: 26px;">vứi cạ, cho anh hun miếng 👉👈</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	together.setFullYear(2021, 09, 18);
+	together.setHours(21);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
